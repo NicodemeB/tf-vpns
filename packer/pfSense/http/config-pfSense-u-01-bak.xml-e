@@ -116,6 +116,18 @@
 			<ipaddr>172.10.0.254</ipaddr>
 			<subnet>24</subnet>
 		</lan>
+		<opt1>
+			<descr><![CDATA[OVPN_U_02]]></descr>
+			<if>ovpns1</if>
+			<enable></enable>
+			<spoofmac></spoofmac>
+		</opt1>
+		<opt2>
+			<descr><![CDATA[OVPN_R_03]]></descr>
+			<if>ovpns2</if>
+			<spoofmac></spoofmac>
+			<enable></enable>
+		</opt2>
 	</interfaces>
 	<staticroutes></staticroutes>
 	<dhcpd>
@@ -249,17 +261,97 @@
 			</created>
 		</rule>
 		<rule>
+			<id></id>
+			<tracker>1585408879</tracker>
 			<type>pass</type>
+			<interface>wan</interface>
 			<ipprotocol>inet</ipprotocol>
-			<descr><![CDATA[Default allow LAN to any rule]]></descr>
-			<interface>lan</interface>
-			<tracker>0100000101</tracker>
+			<tag></tag>
+			<tagged></tagged>
+			<max></max>
+			<max-src-nodes></max-src-nodes>
+			<max-src-conn></max-src-conn>
+			<max-src-states></max-src-states>
+			<statetimeout></statetimeout>
+			<statetype><![CDATA[keep state]]></statetype>
+			<os></os>
+			<protocol>udp</protocol>
 			<source>
-				<network>lan</network>
+				<any></any>
+			</source>
+			<destination>
+				<network>(self)</network>
+				<port>1194</port>
+			</destination>
+			<descr></descr>
+			<updated>
+				<time>1585408879</time>
+				<username><![CDATA[admin@172.16.1.11 (Local Database)]]></username>
+			</updated>
+			<created>
+				<time>1585408879</time>
+				<username><![CDATA[admin@172.16.1.11 (Local Database)]]></username>
+			</created>
+		</rule>
+		<rule>
+			<id></id>
+			<tracker>1585409742</tracker>
+			<type>pass</type>
+			<interface>wan</interface>
+			<ipprotocol>inet</ipprotocol>
+			<tag></tag>
+			<tagged></tagged>
+			<max></max>
+			<max-src-nodes></max-src-nodes>
+			<max-src-conn></max-src-conn>
+			<max-src-states></max-src-states>
+			<statetimeout></statetimeout>
+			<statetype><![CDATA[keep state]]></statetype>
+			<os></os>
+			<protocol>udp</protocol>
+			<source>
+				<any></any>
+			</source>
+			<destination>
+				<network>(self)</network>
+				<port>1195</port>
+			</destination>
+			<descr></descr>
+			<updated>
+				<time>1585409742</time>
+				<username><![CDATA[admin@172.16.1.11 (Local Database)]]></username>
+			</updated>
+			<created>
+				<time>1585409742</time>
+				<username><![CDATA[admin@172.16.1.11 (Local Database)]]></username>
+			</created>
+		</rule>
+		<rule>
+			<id></id>
+			<tracker>0100000101</tracker>
+			<type>pass</type>
+			<interface>lan</interface>
+			<ipprotocol>inet</ipprotocol>
+			<tag></tag>
+			<tagged></tagged>
+			<max></max>
+			<max-src-nodes></max-src-nodes>
+			<max-src-conn></max-src-conn>
+			<max-src-states></max-src-states>
+			<statetimeout></statetimeout>
+			<statetype><![CDATA[keep state]]></statetype>
+			<os></os>
+			<source>
+				<any></any>
 			</source>
 			<destination>
 				<any></any>
 			</destination>
+			<descr><![CDATA[Default allow LAN to any rule]]></descr>
+			<updated>
+				<time>1585409419</time>
+				<username><![CDATA[admin@172.16.1.11 (Local Database)]]></username>
+			</updated>
 		</rule>
 		<rule>
 			<type>pass</type>
@@ -273,6 +365,68 @@
 			<destination>
 				<any></any>
 			</destination>
+		</rule>
+		<rule>
+			<id></id>
+			<tracker>1585409460</tracker>
+			<type>pass</type>
+			<interface>openvpn</interface>
+			<ipprotocol>inet</ipprotocol>
+			<tag></tag>
+			<tagged></tagged>
+			<max></max>
+			<max-src-nodes></max-src-nodes>
+			<max-src-conn></max-src-conn>
+			<max-src-states></max-src-states>
+			<statetimeout></statetimeout>
+			<statetype><![CDATA[keep state]]></statetype>
+			<os></os>
+			<source>
+				<any></any>
+			</source>
+			<destination>
+				<any></any>
+			</destination>
+			<descr></descr>
+			<updated>
+				<time>1585409460</time>
+				<username><![CDATA[admin@172.16.1.11 (Local Database)]]></username>
+			</updated>
+			<created>
+				<time>1585409460</time>
+				<username><![CDATA[admin@172.16.1.11 (Local Database)]]></username>
+			</created>
+		</rule>
+		<rule>
+			<id></id>
+			<tracker>1585409045</tracker>
+			<type>pass</type>
+			<interface>opt1</interface>
+			<ipprotocol>inet</ipprotocol>
+			<tag></tag>
+			<tagged></tagged>
+			<max></max>
+			<max-src-nodes></max-src-nodes>
+			<max-src-conn></max-src-conn>
+			<max-src-states></max-src-states>
+			<statetimeout></statetimeout>
+			<statetype><![CDATA[keep state]]></statetype>
+			<os></os>
+			<source>
+				<any></any>
+			</source>
+			<destination>
+				<any></any>
+			</destination>
+			<descr></descr>
+			<updated>
+				<time>1585409045</time>
+				<username><![CDATA[admin@172.16.1.11 (Local Database)]]></username>
+			</updated>
+			<created>
+				<time>1585409045</time>
+				<username><![CDATA[admin@172.16.1.11 (Local Database)]]></username>
+			</created>
 		</rule>
 		<separator>
 			<wan></wan>
@@ -389,7 +543,114 @@
 		<sequence>system_information:col1:show,netgate_services_and_support:col2:show,interfaces:col2:show</sequence>
 		<period>10</period>
 	</widgets>
-	<openvpn></openvpn>
+	<openvpn>
+		<openvpn-server>
+			<vpnid>1</vpnid>
+			<mode>p2p_shared_key</mode>
+			<protocol>UDP4</protocol>
+			<dev_mode>tun</dev_mode>
+			<interface>wan</interface>
+			<ipaddr></ipaddr>
+			<local_port>1194</local_port>
+			<description></description>
+			<custom_options></custom_options>
+			<shared_key>Iw0KIyAyMDQ4IGJpdCBPcGVuVlBOIHN0YXRpYyBrZXkNCiMNCi0tLS0tQkVHSU4gT3BlblZQTiBTdGF0aWMga2V5IFYxLS0tLS0NCjMyOTBlYTU4NTM4OTUxZjhmOWIzMzQ3MzBlYmQyMjY0DQo4OTg0YWJkNmI2Mjk4ZWYwNTZiNjE2MTYxNjk1OTczMQ0KZTViZTRiNGNmNWIwZjc2ZjQyOWRkOTQ1M2QwZTUxY2INCjA4ZDI3NDg5YWYwNWM5NDFjZDEyYmYyOGE3MDBiNTFmDQpkN2ExY2JhNTA0ZTNjOWY2NWEyMmRlMzI5ZThmODNmZQ0KNDc5ODVhMGIxMjM0NzdiZjQ5Mjg2OTQ3MjQzMTA2ZWINCmM0MmNkYjVlMjQ4OGY3ZWE5MDNmMjc3ZmRiZmViM2NjDQo4ZDliYzk4NjdiOTBlZjg1Nzg1MTdkOTJiNTNhNTZjYQ0KMjdiYmRhY2YyMDQ4MGVjNTI1YjQ4NzRlY2IxZTk4OWENCmQzOTk3NjgzN2RlNjRhODBhMDEzZDdiZTczZDIxNjEwDQo5NjI3M2QzZjliYTMxNGIzODkxZDE4ZmIwNjk2YTllOA0KYjUyMmU0YjVkMWM0M2RmYTU4NGE1ODUyODA1NWQwNmUNCmYyNjQ5ZjgxZWRhNDgyOWYzZjQ3N2RmMzU1NzYwZmVlDQowN2YzMDQ2NzA4YTkwMmRjZDQ5NTAyYmFlODg5NWRhZQ0KNTEyYTU5OWIxMDEwZmE1Y2YzMmZiMTgyMjRkYjhlMDgNCjY2MWEwOTllNGExYTQwNWE5ZDFhODY0MTQzOGY4NjliDQotLS0tLUVORCBPcGVuVlBOIFN0YXRpYyBrZXkgVjEtLS0tLQ0K</shared_key>
+			<crypto>AES-128-CBC</crypto>
+			<digest>SHA256</digest>
+			<engine>none</engine>
+			<tunnel_network>10.255.255.0/30</tunnel_network>
+			<tunnel_networkv6></tunnel_networkv6>
+			<remote_network>172.11.0.0/24</remote_network>
+			<remote_networkv6></remote_networkv6>
+			<gwredir></gwredir>
+			<gwredir6></gwredir6>
+			<local_network>172.10.0.0/24</local_network>
+			<local_networkv6></local_networkv6>
+			<maxclients></maxclients>
+			<compression>none</compression>
+			<compression_push></compression_push>
+			<passtos></passtos>
+			<client2client></client2client>
+			<dynamic_ip></dynamic_ip>
+			<topology>subnet</topology>
+			<serverbridge_dhcp></serverbridge_dhcp>
+			<serverbridge_interface>none</serverbridge_interface>
+			<serverbridge_routegateway></serverbridge_routegateway>
+			<serverbridge_dhcp_start></serverbridge_dhcp_start>
+			<serverbridge_dhcp_end></serverbridge_dhcp_end>
+			<exit_notify>none</exit_notify>
+			<sndrcvbuf></sndrcvbuf>
+			<netbios_enable></netbios_enable>
+			<netbios_ntype>0</netbios_ntype>
+			<netbios_scope></netbios_scope>
+			<create_gw>both</create_gw>
+			<verbosity_level>1</verbosity_level>
+			<ncp-ciphers>AES-128-GCM</ncp-ciphers>
+			<ncp_enable>disabled</ncp_enable>
+			<ping_method>keepalive</ping_method>
+			<keepalive_interval>10</keepalive_interval>
+			<keepalive_timeout>60</keepalive_timeout>
+			<ping_seconds>10</ping_seconds>
+			<ping_push></ping_push>
+			<ping_action>ping_restart</ping_action>
+			<ping_action_seconds>60</ping_action_seconds>
+			<ping_action_push></ping_action_push>
+			<inactive_seconds>0</inactive_seconds>
+		</openvpn-server>
+		<openvpn-server>
+			<vpnid>2</vpnid>
+			<mode>p2p_shared_key</mode>
+			<protocol>UDP4</protocol>
+			<dev_mode>tun</dev_mode>
+			<interface>wan</interface>
+			<ipaddr></ipaddr>
+			<local_port>1195</local_port>
+			<description></description>
+			<custom_options></custom_options>
+			<shared_key>IwojIDIwNDggYml0IE9wZW5WUE4gc3RhdGljIGtleQojCi0tLS0tQkVHSU4gT3BlblZQTiBTdGF0aWMga2V5IFYxLS0tLS0KZmY1MTNlYjczOWRhZjE1YzVmZjQ3OWJiMjJjYjYyYzAKNzM3ZGQzOGU5N2JjNWQ4NjgyMzFiYjEzZTg5ZGRmZTcKNjZiNWM5M2MxMmUwOTAxZGMxZGQxY2YyYTRhNDVkYjgKNTVkMzJjOWQ4YzhjNmUyODY4YjcwZjY3MTY5N2MwZWYKZWU5MmViYWI3Nzk4YTgwNjgxNjY1NDY5YmMyYjRlM2QKMDhmZWUxMjdhZWExMDY1NWYyZDQ3ZmIxZTY4NWYyY2QKNWRlY2Q5MDVhMDE2ZWIwNGRiYmQ1YTcwYmUyYTdmMmMKNTRlN2UyMmFiYmQ4NDI3MGJjYmYxNWE4NjgzOWRkYTQKZTg0OTZlMDUwYzA4ZThjYTdmMjgyMDg5MmZmZGNhYTgKZjE4MDc4ZmI5OTE5MWY0OGQxOTczYjU5YjdhZjc1NmEKMjUzZjA5NzdlZGJhMDJkZmEzNzQyNTVkZDc5OGE1ODEKYmI5NmJmNWRjNDQyMmZmMDM5OWIyNTYyZDJlNzI0ZjIKZmY5NTlhNzUzNTY2OWRhNjI2ZWU1ZmQ1N2Y0MzJhMGEKZmUwMDNkYzBiMGNlMjk2NzQyOTgzNzFiOWEyN2QyMmUKNTU3Njc3YTJhNGZmNGMyOTU5YjFlYjk3MTk2NTc2ZDkKOTdiOGEzMmRkYmE4NGQ5NWVhMTkzMmI1MTg0ZjkyMzAKLS0tLS1FTkQgT3BlblZQTiBTdGF0aWMga2V5IFYxLS0tLS0K</shared_key>
+			<crypto>AES-128-CBC</crypto>
+			<digest>SHA256</digest>
+			<engine>none</engine>
+			<tunnel_network>10.255.255.4/30</tunnel_network>
+			<tunnel_networkv6></tunnel_networkv6>
+			<remote_network>172.12.0.0/24</remote_network>
+			<remote_networkv6></remote_networkv6>
+			<gwredir></gwredir>
+			<gwredir6></gwredir6>
+			<local_network></local_network>
+			<local_networkv6></local_networkv6>
+			<maxclients></maxclients>
+			<compression>none</compression>
+			<compression_push></compression_push>
+			<passtos></passtos>
+			<client2client></client2client>
+			<dynamic_ip></dynamic_ip>
+			<topology>subnet</topology>
+			<serverbridge_dhcp></serverbridge_dhcp>
+			<serverbridge_interface>none</serverbridge_interface>
+			<serverbridge_routegateway></serverbridge_routegateway>
+			<serverbridge_dhcp_start></serverbridge_dhcp_start>
+			<serverbridge_dhcp_end></serverbridge_dhcp_end>
+			<exit_notify>none</exit_notify>
+			<sndrcvbuf></sndrcvbuf>
+			<netbios_enable></netbios_enable>
+			<netbios_ntype>0</netbios_ntype>
+			<netbios_scope></netbios_scope>
+			<create_gw>both</create_gw>
+			<verbosity_level>1</verbosity_level>
+			<ncp-ciphers>AES-128-GCM</ncp-ciphers>
+			<ncp_enable>enabled</ncp_enable>
+			<ping_method>keepalive</ping_method>
+			<keepalive_interval>10</keepalive_interval>
+			<keepalive_timeout>60</keepalive_timeout>
+			<ping_seconds>10</ping_seconds>
+			<ping_push></ping_push>
+			<ping_action>ping_restart</ping_action>
+			<ping_action_seconds>60</ping_action_seconds>
+			<ping_action_push></ping_action_push>
+			<inactive_seconds>0</inactive_seconds>
+		</openvpn-server>
+	</openvpn>
 	<dnshaper></dnshaper>
 	<unbound>
 		<enable></enable>
@@ -402,8 +663,7 @@
 		<dnssecstripped></dnssecstripped>
 	</unbound>
 	<revision>
-		<time>1585405023</time>
-		<description><![CDATA[admin@172.16.1.11 (Local Database): Successfully created user terraform]]></description>
+		<time>1585410007</time>
 		<username><![CDATA[admin@172.16.1.11 (Local Database)]]></username>
 	</revision>
 	<cert>
@@ -552,6 +812,120 @@
 			<configfile>frr.xml</configfile>
 			<url>/status_frr.php</url>
 		</menu>
+		<frrospfdinterfaces>
+			<config>
+				<interface>lan</interface>
+				<descr></descr>
+				<networktype></networktype>
+				<passive></passive>
+				<mtuignore></mtuignore>
+				<metric></metric>
+				<interfacearea>0.0.0.0</interfacearea>
+				<acceptfilter></acceptfilter>
+				<authtype>digest</authtype>
+				<password><![CDATA[CHANGEME]]></password>
+				<routerpriorityelections></routerpriorityelections>
+				<retransmitinterval></retransmitinterval>
+				<hellointervalinseconds></hellointervalinseconds>
+				<deadtimer></deadtimer>
+				<minimalhello></minimalhello>
+			</config>
+			<config>
+				<interface>opt1</interface>
+				<descr><![CDATA[u-02]]></descr>
+				<networktype></networktype>
+				<passive></passive>
+				<mtuignore></mtuignore>
+				<metric></metric>
+				<interfacearea>0.0.0.0</interfacearea>
+				<acceptfilter></acceptfilter>
+				<authtype>digest</authtype>
+				<password><![CDATA[CHANGEME]]></password>
+				<routerpriorityelections></routerpriorityelections>
+				<retransmitinterval></retransmitinterval>
+				<hellointervalinseconds></hellointervalinseconds>
+				<deadtimer></deadtimer>
+				<minimalhello></minimalhello>
+			</config>
+			<config>
+				<interface>opt2</interface>
+				<descr><![CDATA[r-03]]></descr>
+				<networktype></networktype>
+				<passive></passive>
+				<mtuignore></mtuignore>
+				<metric></metric>
+				<interfacearea>0.0.0.0</interfacearea>
+				<acceptfilter></acceptfilter>
+				<authtype>digest</authtype>
+				<password><![CDATA[CHANGEME]]></password>
+				<routerpriorityelections></routerpriorityelections>
+				<retransmitinterval></retransmitinterval>
+				<hellointervalinseconds></hellointervalinseconds>
+				<deadtimer></deadtimer>
+				<minimalhello></minimalhello>
+			</config>
+		</frrospfdinterfaces>
+		<frrospfd>
+			<config>
+				<enable>on</enable>
+				<adjacencylog></adjacencylog>
+				<routerid></routerid>
+				<spfholdtime></spfholdtime>
+				<spfdelay></spfdelay>
+				<area>0.0.0.0</area>
+				<areatype>none</areatype>
+				<row>
+					<routevalue></routevalue>
+					<routearea></routearea>
+				</row>
+				<redistributeconnectedsubnets>on</redistributeconnectedsubnets>
+				<redistributeconnectedsubnets_metric></redistributeconnectedsubnets_metric>
+				<redistributeconnectedsubnets_metrictype></redistributeconnectedsubnets_metrictype>
+				<redistributeconnectedsubnets_routemap>none</redistributeconnectedsubnets_routemap>
+				<redistributeconnectedsubnets_distlist>none</redistributeconnectedsubnets_distlist>
+				<redistributekernel></redistributekernel>
+				<redistributekernel_metric></redistributekernel_metric>
+				<redistributekernel_metrictype></redistributekernel_metrictype>
+				<redistributekernel_routemap>none</redistributekernel_routemap>
+				<redistributekernel_distlist>none</redistributekernel_distlist>
+				<redistributebgp></redistributebgp>
+				<redistributebgp_metric></redistributebgp_metric>
+				<redistributebgp_metrictype></redistributebgp_metrictype>
+				<redistributebgp_routemap>none</redistributebgp_routemap>
+				<redistributebgp_distlist>none</redistributebgp_distlist>
+				<redistributestatic></redistributestatic>
+				<redistributestatic_metric></redistributestatic_metric>
+				<redistributestatic_metrictype></redistributestatic_metrictype>
+				<redistributestatic_routemap>none</redistributestatic_routemap>
+				<redistributestatic_distlist>none</redistributestatic_distlist>
+				<redistributedefaultroute></redistributedefaultroute>
+				<redistributedefaultroute_always></redistributedefaultroute_always>
+				<redistributedefaultroute_metric></redistributedefaultroute_metric>
+				<redistributedefaultroute_metrictype></redistributedefaultroute_metrictype>
+				<redistributedefaultroute_routemap>none</redistributedefaultroute_routemap>
+				<rfc1583></rfc1583>
+				<opaquelsa></opaquelsa>
+				<referencebandwidth></referencebandwidth>
+				<max_metric_administrative></max_metric_administrative>
+				<max_metric_startup></max_metric_startup>
+				<max_metric_shutdown></max_metric_shutdown>
+				<writemultiplier></writemultiplier>
+				<abrtype>cisco</abrtype>
+			</config>
+		</frrospfd>
+		<frr>
+			<config>
+				<enable>on</enable>
+				<password><![CDATA[CHANGEME]]></password>
+				<carpstatusvid>none</carpstatusvid>
+				<logging></logging>
+				<routerid></routerid>
+				<row>
+					<routevalue></routevalue>
+					<routetarget>none</routetarget>
+				</row>
+			</config>
+		</frr>
 	</installedpackages>
 	<gateways></gateways>
 	<rrddata>

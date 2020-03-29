@@ -64,6 +64,7 @@
             "12<enter>",
             "<wait5><wait5>playback installpkg Open-VM-Tools<enter>",
             "<wait10><wait10><wait10><wait10>playback installpkg frr<enter>",
+            "<wait10><wait10><wait10><wait10>playback installpkg openvpn-client-export<enter>",
             "<wait10><wait10><wait10><wait10>exit<enter>",
             "<wait5><wait5>8<enter><wait><wait>",
             "cp /conf/config.xml /conf/config.xml.org<wait><wait><enter>",
