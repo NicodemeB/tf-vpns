@@ -9,9 +9,8 @@ variable "vcenter_password" {
 }
 
 variable "vcenter_vsphere_server" {
-  default = "vsphere_server"
+  default = "vcenterserver.rack"
 }
-
 
 provider "vsphere" {
   # If you use a domain set your login like this "MyDomain\\MyUser"

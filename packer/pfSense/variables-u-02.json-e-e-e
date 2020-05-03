@@ -1,8 +1,8 @@
 {
     "vcenter_server": "vcenterserver.rack",
     "vsphere-datacenter": "FCR",
-    "username": "packer@vsphere.rack",
-    "password": "n7acD7EzSDfYZxdP#",
+    "username": "{{env `PACKER_USERNAME`}}",
+    "password": "{{env `PACKER_PASSWORD`}}",
     "datastore": "vESXI-U-02-DS1",
     "host": "vesxi-u-02.rack",
     "cluster": "vesxi-u-02.rack",
