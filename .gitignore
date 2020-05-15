@@ -1,3 +1,4 @@
 secrets.tfvars
 */*.DS_Store
 *.DS_Store
+.terraform/
