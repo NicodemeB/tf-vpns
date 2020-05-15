@@ -3,3 +3,4 @@ secrets.tfvars
 *.DS_Store
 .terraform/
 terraform.tfstate*
+packer/pfSense/packer_cache/

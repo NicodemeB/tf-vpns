@@ -13,7 +13,6 @@
 			<description><![CDATA[All Users]]></description>
 			<scope>system</scope>
 			<gid>1998</gid>
-			<member>0</member>
 		</group>
 		<group>
 			<name>admins</name>
@@ -28,9 +27,14 @@
 			<descr><![CDATA[System Administrator]]></descr>
 			<scope>system</scope>
 			<groupname>admins</groupname>
-			<bcrypt-hash>$2y$10$By96q5ohP/msF0iUnGDrtOSO43zirWxDHl9NDA24o9PxmvLqNLrd2</bcrypt-hash>
+			<bcrypt-hash>$2y$10$Gw3w2.NP7kUotVetzsYR.OJTJ06s/3mwfD12U/4G3aUa3sB6Btxey</bcrypt-hash>
 			<uid>0</uid>
 			<priv>user-shell-access</priv>
+			<expires></expires>
+			<dashboardcolumns>2</dashboardcolumns>
+			<authorizedkeys></authorizedkeys>
+			<ipsecpsk></ipsecpsk>
+			<webguicss>pfSense.css</webguicss>
 		</user>
 		<nextuid>2000</nextuid>
 		<nextgid>2000</nextgid>
@@ -348,8 +352,7 @@
 			<wan></wan>
 		</separator>
 	</filter>
-	<shaper>
-	</shaper>
+	<shaper></shaper>
 	<ipsec></ipsec>
 	<aliases></aliases>
 	<proxyarp></proxyarp>
@@ -511,8 +514,7 @@
 			<inactive_seconds>0</inactive_seconds>
 		</openvpn-client>
 	</openvpn>
-	<dnshaper>
-	</dnshaper>
+	<dnshaper></dnshaper>
 	<unbound>
 		<enable></enable>
 		<dnssec></dnssec>
@@ -524,9 +526,9 @@
 		<dnssecstripped></dnssecstripped>
 	</unbound>
 	<revision>
-		<time>1585409450</time>
-		<description><![CDATA[admin@172.16.1.11 (Local Database): Firewall: Rules - saved/edited a firewall rule.]]></description>
-		<username><![CDATA[admin@172.16.1.11 (Local Database)]]></username>
+		<time>1589552464</time>
+		<description><![CDATA[admin@172.16.28.100 (Local Database): Successfully edited user admin]]></description>
+		<username><![CDATA[admin@172.16.28.100 (Local Database)]]></username>
 	</revision>
 	<cert>
 		<refid>5e7622dee3d22</refid>

@@ -28,10 +28,15 @@
 			<descr><![CDATA[System Administrator]]></descr>
 			<scope>system</scope>
 			<groupname>admins</groupname>
-			<bcrypt-hash>$2y$10$By96q5ohP/msF0iUnGDrtOSO43zirWxDHl9NDA24o9PxmvLqNLrd2</bcrypt-hash>
+			<bcrypt-hash>$2y$10$M2TFW9/fxTovZ.i9hRw7HumQD/u/1AYzd0p/tXT0wZuoc4b6nVaMi</bcrypt-hash>
 			<uid>0</uid>
 			<priv>user-shell-access</priv>
 			<cert>5e80799c3dfc2</cert>
+			<expires></expires>
+			<dashboardcolumns>2</dashboardcolumns>
+			<authorizedkeys></authorizedkeys>
+			<ipsecpsk></ipsecpsk>
+			<webguicss>pfSense.css</webguicss>
 		</user>
 		<user>
 			<scope>user</scope>
@@ -723,9 +728,9 @@
 		<dnssecstripped></dnssecstripped>
 	</unbound>
 	<revision>
-		<time>1585478044</time>
-		<description><![CDATA[admin@172.16.1.11 (Local Database): /system_certmanager.php made unknown change]]></description>
-		<username><![CDATA[admin@172.16.1.11 (Local Database)]]></username>
+		<time>1589552471</time>
+		<description><![CDATA[admin@172.100.0.102 (Local Database): Successfully edited user admin]]></description>
+		<username><![CDATA[admin@172.100.0.102 (Local Database)]]></username>
 	</revision>
 	<cert>
 		<refid>5e7622dee3d22</refid>
@@ -816,26 +821,6 @@
 					<type>plugin_carp</type>
 				</item>
 			</plugins>
-		</package>
-		<package>
-			<name>OpenVPN Client Export Utility</name>
-			<internal_name>openvpn-client-export</internal_name>
-			<descr><![CDATA[Allows a pre-configured OpenVPN Windows Client or Mac OS X's Viscosity configuration bundle to be exported directly from pfSense.]]></descr>
-			<version>1.4.20</version>
-			<configurationfile>openvpn-client-export.xml</configurationfile>
-			<tabs>
-				<tab>
-					<name>Client Export</name>
-					<tabgroup>OpenVPN</tabgroup>
-					<url>/vpn_openvpn_export.php</url>
-				</tab>
-				<tab>
-					<name>Shared Key Export</name>
-					<tabgroup>OpenVPN</tabgroup>
-					<url>/vpn_openvpn_export_shared.php</url>
-				</tab>
-			</tabs>
-			<include_file>/usr/local/pkg/openvpn-client-export.inc</include_file>
 		</package>
 		<service>
 			<name>vmware-guestd</name>
@@ -1023,6 +1008,7 @@
 				</row>
 			</config>
 		</frr>
+		<frrospfdareas></frrospfdareas>
 	</installedpackages>
 	<gateways></gateways>
 	<rrddata>
