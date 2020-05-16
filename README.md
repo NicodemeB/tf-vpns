@@ -32,6 +32,10 @@ This script will create the following resources:
 terraform destroy
 ```
 
+### Demo
+
+TODO
+
 ## Packer 
 
 Environment variables are used to allow Packer to connect to the vCenter,
