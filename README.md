@@ -40,3 +40,7 @@ Environment variables are used to allow Packer to connect to the vCenter,
 PACKER_USERNAME=packer@vsphere.local
 PACKER_PASSWORD=Pa$$w0rd2.0
 ```
+
+### Demo
+
+![](./demo/Packer-pfSense.gif)
