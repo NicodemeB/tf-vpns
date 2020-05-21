@@ -26,15 +26,15 @@ This script will create the following resources:
 - 2 network port per pfSense VM deployed 
 - 3 pfSense VMs
 
+### Demo
+
+![](./demo/tf-appply-pfSense.gif)
+
 ### Delete stack
 
 ```bash
 terraform destroy
 ```
-
-### Demo
-
-TODO
 
 ## Packer 
 
