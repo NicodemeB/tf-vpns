@@ -47,4 +47,4 @@ PACKER_PASSWORD=Pa$$w0rd2.0
 
 ### Demo
 
-![](./demo/Packer-pfSense.gif)
+![](./demo/packer-pfSense.gif)
