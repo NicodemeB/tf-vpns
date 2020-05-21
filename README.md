@@ -28,7 +28,7 @@ This script will create the following resources:
 
 ### Demo
 
-![](./demo/tf-appply-pfSense.gif)
+![](./demo/tf-apply-pfSense.gif)
 
 ### Delete stack
 
